@@ -121,6 +121,8 @@ app.post('/logar', (req, res) => {
 
 //log out
 app.get('/logout', (req, res) => {
+  res.sendFile(main);
+
   // Destrói o estado de logon na sessão
   req.session.logado = false;
   req.session.user = null;
